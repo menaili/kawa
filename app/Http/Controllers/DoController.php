@@ -29,6 +29,15 @@ class DoController extends Controller
       return back();
     }
 
+    public function deleteN(Request $request)
+    {
+       
+
+        Notification::findorFail($request->deleteme)->delete();
+
+      return back();
+    }
+
     public function editM($id)
     {
         $members = Member::with('position','link')->where('id',$id)->first();

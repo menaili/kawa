@@ -19,8 +19,7 @@
 <body> 
   @include('pages.header')
  <div class="head">
-        <h1 class="title_ser" titre="hosting">Projects</h1>
-        <button onclick="location.href='/Projects/create'" type="button" class="btn btn-primary">Add new project</button>
+        <h1 class="title_ser" titre="hosting">Notifications</h1>
         </div>
     <table class="table table-striped">
         
@@ -86,16 +85,16 @@
         <div class="modal-dialog">
           <div class="modal-content">
 
-            <form action="{{ route('deleteP')}}" method="POST">
+            <form action="{{ route('deleteN')}}" method="POST">
               @csrf
 
             <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete this Project</h1>
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Delete this Message</h1>
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
               <input type="hidden" name="deleteme" id="deleteCat">
-              <h5>Are you sure you want to delete this project!</h5>
+              <h5>Are you sure you want to delete this message!</h5>
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>

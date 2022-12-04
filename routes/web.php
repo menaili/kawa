@@ -72,6 +72,8 @@ Route::middleware([
 
     Route::post('/deleteP', ['App\Http\Controllers\DoController'::class,'deleteP'])->name("deleteP");
 
+    Route::post('/deleteN', ['App\Http\Controllers\DoController'::class,'deleteN'])->name("deleteN");
+
     Route::post('/deletememb', ['App\Http\Controllers\DoController'::class,'deletememb'])->name("deletememb");
 
     Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
