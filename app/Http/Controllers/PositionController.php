@@ -24,7 +24,7 @@ class PositionController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.new-position');
     }
 
     /**
@@ -35,7 +35,12 @@ class PositionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $cat = new Position();
+        
+        $cat->name = $request->name;
+        $cat->save();
+
+        return back();
     }
 
     /**

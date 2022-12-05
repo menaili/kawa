@@ -78,7 +78,11 @@ Route::middleware([
 
     Route::post('/memAdd', ['App\Http\Controllers\DoController'::class,'store'])->name("memAdd");
 
+    //Route::post('/catAdd', ['App\Http\Controllers\DoController'::class,'storeC'])->name("catAdd");
+
     Route::resource('/Notification', 'App\Http\Controllers\NotificationController'::class)->only(['index']);
+
+    Route::resource('/Position', 'App\Http\Controllers\PositionController'::class);
 
 
 
